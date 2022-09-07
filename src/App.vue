@@ -3,6 +3,7 @@
 <template>
   <nav>
     <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/posts">Posts</RouterLink>
     <RouterLink to="/about">About</RouterLink>
   </nav>
 
