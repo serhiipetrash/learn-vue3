@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import ModalsView from '../views/ModalsView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +25,11 @@ const router = createRouter({
       path: '/post/:id',
       name: 'post',
       component: () => import('../views/Post.vue')
+    },
+    {
+      path: '/modals',
+      name: 'modals',
+      component: ModalsView
     }
   ]
 })
