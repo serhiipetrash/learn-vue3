@@ -30,7 +30,14 @@ const router = createRouter({
       path: '/modals',
       name: 'modals',
       component: ModalsView
+    },
+    {
+      path: '/cards',
+      name: 'cards',
+      component: () => import('../views/Cards.vue')
     }
+
+    
   ]
 })
 

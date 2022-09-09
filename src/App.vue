@@ -10,6 +10,7 @@
     <RouterLink to="/posts">Posts</RouterLink>
     <RouterLink to="/about">About</RouterLink>
     <RouterLink to="/modals">Modals</RouterLink>
+    <RouterLink to="/cards">Cards</RouterLink>
   </nav>
 
   <RouterView />
