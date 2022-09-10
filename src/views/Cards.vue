@@ -1,6 +1,6 @@
 <script setup>
 import Card from '../components/Card.vue';
-import { ref } from 'vue'
+import { ref, inject } from 'vue'
 const cards = ref([
   { id: 1, title: 'Card title 1', cardimg: 'https://dummyimage.com/300x300/9c9c9c/fff.jpg', desc: 'Deccription card, some text Lorem ipsum dolor sit amet consectetur.' },
   { id: 2, title: 'Card title 2', cardimg: 'https://dummyimage.com/300x300/9c9c9c/f0f.jpg', desc: 'Deccription card, some text Lorem ipsum dolor sit amet consectetur.' },
@@ -10,10 +10,20 @@ const cards = ref([
   { id: 6, title: 'Card title 6', cardimg: 'https://dummyimage.com/300x300/9c9c9c/f00.jpg', desc: 'Deccription card, some text Lorem ipsum dolor sit amet .' }
 ])
 
+const userProfile = inject('userProfile')
+
 </script>
 
 <template>
   <h2>Cards list</h2>
+  <h3>User profile:</h3>
+  <p>Name: {{ userProfile.name }},
+    Company: {{ userProfile.company }},
+    Position: {{ userProfile.position }},
+    Skills: {{userProfile.skills}}.
+
+  </p>
+  <br />
   <div class="cards-container">
     <Card v-for="item in cards" :key="item.id" :title="item.title" :desc="item.desc" :cardimg="item.cardimg"></Card>
 

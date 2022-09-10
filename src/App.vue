@@ -28,7 +28,16 @@ const userData = reactive({
   name: 'Danny',
   username: 'dannyconnell'
 })
+const userProfile = reactive({
+  name: 'Serhii',
+  company: 'KeenEthics',
+  position: 'junior full stack deweloper',
+  skills: 'JS, VueJs, API'
+})
+
 provide('userData', userData)
+provide('userProfile', userProfile)
+
 </script>
   
 <style>
