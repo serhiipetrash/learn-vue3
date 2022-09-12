@@ -1,28 +1,14 @@
 <script setup>
 import { reactive, computed, watch } from 'vue'
+import { useCounter } from '../use/useCounter';
 // const counter = ref(5),
 //   counterTitle = ref('My counter')
 
 const appTitle = 'My app counter'
 
-const counterData = reactive({
-  counter: 10,
-  title: 'My new title'
-})
+const { counterData, oddOrEven, increaseCounter, decreaseCounter } = useCounter()
 
-watch(() => counterData.counter, (newCounter) => {
-  if (newCounter === 20) {
-    alert('Counter more then 20')
-  }
-})
 
-const oddOrEven = computed(() => {
-  if (counterData.counter % 2 === 0) return 'even'
-  else return 'odd'
-})
-
-const increaseCounter = (amount) => counterData.counter += amount
-const decreaseCounter = (amount) => counterData.counter -= amount
 </script>
 
 <template >
