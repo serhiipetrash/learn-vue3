@@ -1,4 +1,4 @@
-# learn-vue3
+# learn-vue3 by Danny Connell lessons on Udemy
 
 
 ## Project Setup
