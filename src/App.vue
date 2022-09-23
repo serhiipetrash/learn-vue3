@@ -15,6 +15,7 @@
     <RouterLink to="/about">About</RouterLink>
     <RouterLink to="/modals">Modals</RouterLink>
     <RouterLink to="/cards">Cards</RouterLink>
+    <RouterLink to="/counter-store">Counter-Store</RouterLink>
   </nav>
 
   <RouterView />
